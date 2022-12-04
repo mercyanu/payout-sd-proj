@@ -1,3 +1,170 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    box-sizing: border-box;
+}
+
+body{   
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.left-cont {
+    background-image: url(/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.right-cont {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card-details-1{
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 4px #000;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+
+.card-details-2 {
+    color: black;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 4px #000;
+    position: absolute;
+    top: 80px;
+    left: 250px;
+}
+
+.front-card{
+    width: 65%;
+    position: absolute;
+    top: 10vh;
+    left: 10vh;
+}
+.front-card > img {
+    width: 85%;
+}
+
+.back-card{
+    width: 65%;
+    position: absolute;
+    top: 55vh;
+    left: 20vh;
+}
+.back-card > img {
+    width: 85%;
+}
+
+.form-cont{
+    width: 350px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid hsl(279, 6%, 55%);
+    border-radius: 8px;
+    width: 100%;
+    font-weight: 700;
+
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inp2{
+    display: flex;
+    gap: 25px;
+}
+
+.date-cont {
+    display: flex;
+    gap: 10px
+}
+
+label{
+    display: block;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.error{
+    font-size: 11px;
+    color: hsl(0, 100%, 66%);
+    margin-left: 3px;
+    visibility: hidden;
+    line-height: 0;
+}
+
+.show-err{
+    visibility: visible;
+}
+
+button{
+    width: 100%;
+    padding: 13px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border: solid 2px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: hsl(278, 68%, 11%);
+    background-color: white;
+}
+
+
+@media only screen and (min-width:768px) {
+    .container{
+        flex-direction: row;
+    }
+
+    .left-cont {
+        background-image: url(/images/bg-main-desktop.png);
+        width: 35%;
+    }
+
+    .front-card{
+        width: 100%;
+        top: 18vh;
+        left: 25vh;
+    }
+
+    .back-card{
+        width: 100%;
+        left: 35vh;
+    }
+}

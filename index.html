@@ -5,9 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Make A Payment</title>
-<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    We are here now WELCOMD!!!!
+    <div class="container">
+        <div class="left-cont">
+            <div class="front-card">
+                <img src="/images/bg-card-front.png" alt=""> 
+                <div class="card-details-1">
+                    <p id="holderDisplay">first last</p>
+                    <p id="cardNoDisplay">- - -</p>
+                    <p> <span id="dateMDisplay">mm</span>/<span id="dateYDisplay">yy</span></p>
+                </div>
+            </div>
+            <div class="back-card">
+                <img src="/images/bg-card-back.png" alt=""> 
+                <div class="card-details-2">
+                    <p id="cvvDisplay">CVV</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-cont">
+            <div class="form-cont">
+                <form action="#" class="my-form" id="myForm" novalidate>
+                    <div>
+                        <label for="holder-name">CARDHOLDER NAME</label>
+                        <input type="text" class="holder-name" id="holderNameInput">
+                        <p class="error">can't be blank</p>
+                    </div>
+                    <div>
+                        <label for="card-no">CARD NUMBER</label>
+                        <input type="text" class="card-no" id="cardNoInput" maxlength="16" onkeypress="return onlyNums(event)">
+                        <p class="error">That's not a valid, enter numbers only</p>
+                    </div>
+                    <div class="inp2">
+                        <div class="exp-cont">
+                            <label for="expiry-date">EXP. DATE (MM/YY)</label>
+                            <div class="date-cont">
+                                <input type="text" class="exp-month" id="dateMInput"  maxlength="2" onkeypress="return onlyNums(event)">
+                                <input type="text" class="exp-year" id="dateYInput"  maxlength="2" onkeypress="return onlyNums(event)">
+                            </div>
+                            <p class="error">can't be blank</p>
+                        </div>
+                        <div class="cvv-cont">
+                            <label for="holder-name">CVV</label>
+                            <input type="text" class="cvv" id="cvvInput" maxlength="3" onkeypress="return onlyNums(event)">
+                            <p class="error">can't be blank</p>
+                        </div>
+                    
+                    </div>
+                    <button class="submit" onclick="validateForm()">confirm</button>
+                </form>
+            </div>
+            
+        </div>
+
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
