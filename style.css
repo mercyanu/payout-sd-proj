@@ -115,7 +115,6 @@ label{
     font-weight: 500;
 }
 
-
 .error{
     font-size: 11px;
     color: hsl(0, 100%, 66%);
@@ -146,6 +145,32 @@ button:hover {
     background-color: white;
 }
 
+.success-cont{
+    width: 350px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-cont img{
+    width: 40px;
+}
+
+.success-cont .succ-text-1 {
+    font-size: 1.6rem;
+    margin: 30px 0 0;
+    font-weight: bold;
+}
+
+.success-cont .succ-text-2 {
+    font-size: 1rem;
+    margin: 5px 0 0;
+    color: hsl(279, 6%, 55%);
+}
+
+.success-cont button{
+    margin-top:40px;
+}
 
 @media only screen and (min-width:768px) {
     .container{
