@@ -64,6 +64,7 @@ body{
     position: absolute;
     top: 10vh;
     left: 10vh;
+    animation: transitionIn 1.5s;
 }
 .front-card > img {
     width: 85%;
@@ -74,6 +75,7 @@ body{
     position: absolute;
     top: 55vh;
     left: 20vh;
+    animation: transitionIn 2s;
 }
 .back-card > img {
     width: 85%;
@@ -81,6 +83,10 @@ body{
 
 .form-cont{
     width: 350px;
+}
+
+.my-form {
+    animation: slideLeft 1.5s;
 }
 
 input {
@@ -170,6 +176,30 @@ button:hover {
 
 .success-cont button{
     margin-top:40px;
+}
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-50deg);
+
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0deg);
+
+    }
+}
+
+@keyframes slideLeft{
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 @media only screen and (min-width:768px) {
